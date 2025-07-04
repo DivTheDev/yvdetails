@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #2f2f2f, #9b1c24); /* Charcoal to Dark Maroon Gradient */
   color: #fff;
   text-align: center;
   min-height: 100vh;
@@ -18,21 +18,24 @@ body {
 
 header {
   padding: 2em;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   text-align: center;
+  z-index: 10;
 }
 
 header h1 {
   font-size: 3em;
   margin-bottom: 0.5em;
+  color: #fff;
 }
 
 header p {
   font-size: 1.2em;
+  color: #ddd;
 }
 
 main {
@@ -42,7 +45,7 @@ main {
 }
 
 #coming-soon {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   padding: 3em;
   border-radius: 10px;
   width: 80%;
@@ -89,13 +92,13 @@ main {
 
 #newsletter-form input:focus {
   outline: none;
-  border: 2px solid #2575fc;
+  border: 2px solid #9b1c24; /* Dark Maroon Border */
 }
 
 #newsletter-form button {
   padding: 0.8em 2.5em;
   font-size: 1em;
-  background-color: #2575fc;
+  background-color: #9b1c24; /* Dark Maroon Button */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -104,11 +107,11 @@ main {
 }
 
 #newsletter-form button:hover {
-  background-color: #6a11cb;
+  background-color: #d0545d; /* Lighter Maroon Hover Effect */
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   padding: 1em;
   position: absolute;
@@ -118,4 +121,5 @@ footer {
 
 footer p {
   font-size: 1em;
+  color: #ddd;
 }
