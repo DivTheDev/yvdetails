@@ -1,2 +1,2 @@
-# yvdetails.com
+# YV Details
 YV Details Website
