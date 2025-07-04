@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YV Details - Car Detailing Service</title>
+  <title>YV Details - Coming Soon</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,36 +13,57 @@
     <p>Professional Car Detailing Service</p>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Exterior Wash & Wax</li>
-      <li>Interior Deep Clean</li>
-      <li>Engine Bay Detailing</li>
-      <li>Paint Correction & Polishing</li>
-    </ul>
-  </section>
-
-  <section id="about">
-    <h2>About YV Details</h2>
-    <p>YV Details is your go-to car detailing specialist, offering premium services to keep your vehicle looking like new. We treat every car like it's our own.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:yvdetails@example.com">yvdetails@example.com</a></p>
-    <p>Phone: 01234 567890</p>
-  </section>
+  <main>
+    <section id="coming-soon">
+      <h2>Coming Soon</h2>
+      <p>We're working hard to bring you the best car detailing service. Stay tuned!</p>
+      
+      <div id="countdown">
+        <p>Launching in:</p>
+        <div id="timer">
+          <span id="days">00</span> days
+          <span id="hours">00</span> hours
+          <span id="minutes">00</span> minutes
+          <span id="seconds">00</span> seconds
+        </div>
+      </div>
+      
+      <p>Sign up for updates:</p>
+      <form id="newsletter-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Notify Me</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 YV Details. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Countdown Timer
+    const countdownDate = new Date("Aug 1, 2025 00:00:00").getTime();
+
+    const interval = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("timer").innerHTML = "We're live now!";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
