@@ -1,2 +1,2 @@
 # YV Details
-YV Details Website
+https://divthedev.github.io/yvdetails
